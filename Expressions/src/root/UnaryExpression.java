@@ -13,7 +13,7 @@ public abstract class UnaryExpression implements Expression {
 	 *  Beachte, dass diese Methode von allen Unterklassen genutzt werden kann.
 	 */
 	public void print(){
-		//TODO: Implement me.
+		System.out.println(operator.toString()+ Integer.toString(operand));
 	}
 	
 	/**
@@ -21,16 +21,13 @@ public abstract class UnaryExpression implements Expression {
 	 * Beachte, dass diese Methode von allen Unterklassen genutzt werden kann.
 	 */
 	public String toString(){
-		//TODO: Implement me.				// Hinweis: benutzte die toString() Methode des Enum Operators
-		return null;	
+						// Hinweis: benutzte die toString() Methode des Enum Operators
+		return  operator.toString()+ Integer.toString(operand);		
 	}
 	
 	/**
 	 * Diese Methode soll zwei beliebige Ausdrücke bezüglich ihres evaluierten Wertes vergleichen.
 	 * Beachte, dass diese Methode von allen Unterklassen genutzt werden kann.
 	 */
-	public boolean equals(Object other){
-		//TODO: Implement me.
-		return false;
-	}
+	public abstract boolean equals(Object other);
 }

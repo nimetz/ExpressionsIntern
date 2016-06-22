@@ -13,7 +13,7 @@ public abstract class BinaryExpression implements Expression {
 	 *  Beachte, dass diese Methode von allen Unterklassen genutzt werden kann.
 	 */
 	public void print(){
-		//TODO: Implement me.
+		System.out.println(Integer.toString(lhs)+ operator.toString()+ Integer.toString(rhs));
 	}
 	
 	/**
@@ -21,16 +21,14 @@ public abstract class BinaryExpression implements Expression {
 	 * Beachte, dass diese Methode von allen Unterklassen genutzt werden kann.
 	 */
 	public String toString(){
-		//TODO: Implement me.				// Hinweise: benutzte die toString() Methode des Enum Operators
-		return null;	
+						// Hinweise: benutzte die toString() Methode des Enum Operators
+		return Integer.toString(lhs)+ operator.toString()+ Integer.toString(rhs);	
 	}
 	
 	/**
 	 * Diese Methode soll zwei beliebige Ausdrücke bezüglich ihres evaluierten Wertes vergleichen.
 	 * Beachte, dass diese Methode von allen Unterklassen genutzt werden kann.
 	 */
-	public boolean equals(Object other){
-		//TODO: Implement me.
-		return false;
-	}
+	public abstract boolean equals(Object other);
+
 }
